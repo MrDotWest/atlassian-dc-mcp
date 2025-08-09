@@ -10,7 +10,7 @@ To use these MCP connectors with Claude Desktop, add the following to your Claud
 
 Set `*_HOST` variables only to domain + port without protocol (e.g., `your-instance.atlassian.net`). The https protocol is assumed.
 
-Alternatively, you can use `*_API_BASE_PATH` variables instead of `*_HOST` to specify the complete API base URL including protocol (e.g., `https://your-instance.atlassian.net/rest`). Note that the `/api/latest/` part is static and added automatically in the code, so you don't need to include it in the `*_API_BASE_PATH` values.
+Alternatively, you can use `*_API_BASE_PATH` variables instead of `*_HOST` to specify the complete API base URL including protocol (e.g., `https://your-instance.atlassian.net/rest`). Note that the `/` part is static and added automatically in the code, so you don't need to include it in the `*_API_BASE_PATH` values.
 
 You can leave only the services you need in the configuration.
 
@@ -215,7 +215,7 @@ CONFLUENCE_API_TOKEN=your-api-token
 BITBUCKET_HOST=your-instance.atlassian.net
 # OR
 BITBUCKET_API_BASE_PATH=https://your-instance.atlassian.net/rest
-# Note: part /api/latest/ is added automatically, do not include it
+# Note: part / is added automatically, do not include it
 BITBUCKET_API_TOKEN=your-api-token
 ```
 

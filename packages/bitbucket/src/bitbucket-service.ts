@@ -265,7 +265,7 @@ export class BitbucketService {
     return handleApiOperation(
       () => __request(OpenAPI, {
         method: 'GET',
-        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}',
+        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}',
         path: {
           'path': path,
           'projectKey': projectKey,

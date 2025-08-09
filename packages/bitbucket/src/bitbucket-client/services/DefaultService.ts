@@ -22,7 +22,7 @@ export class DefaultService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/inbox/pull-requests',
+            url: '/inbox/pull-requests',
             query: {
                 'role': role,
                 'limit': limit,
@@ -39,7 +39,7 @@ export class DefaultService {
     public static getPullRequestCount(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/inbox/pull-requests/count',
+            url: '/inbox/pull-requests/count',
         });
     }
 }

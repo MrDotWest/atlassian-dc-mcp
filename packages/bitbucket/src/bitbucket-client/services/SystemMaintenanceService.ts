@@ -201,7 +201,7 @@ export class SystemMaintenanceService {
     public static deleteBanner(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/banner',
+            url: '/admin/banner',
             errors: {
                 401: `The user does not have permission to access the banner service through this endpoint`,
             },
@@ -216,7 +216,7 @@ export class SystemMaintenanceService {
     public static getBanner(): CancelablePromise<RestAnnouncementBanner> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/banner',
+            url: '/admin/banner',
             errors: {
                 401: `The user does not have permission to access the banner service through this endpoint`,
             },
@@ -239,7 +239,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/banner',
+            url: '/admin/banner',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -259,7 +259,7 @@ export class SystemMaintenanceService {
     public static getInformation(): CancelablePromise<RestClusterInformation> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/cluster',
+            url: '/admin/cluster',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve the cluster information.`,
             },
@@ -276,7 +276,7 @@ export class SystemMaintenanceService {
     public static clearDefaultBranch(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/default-branch',
+            url: '/admin/default-branch',
             errors: {
                 401: `The current user does not have sufficient permissions to clear the global default branch.`,
             },
@@ -293,7 +293,7 @@ export class SystemMaintenanceService {
     public static getDefaultBranch(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/default-branch',
+            url: '/admin/default-branch',
             errors: {
                 404: `No global default branch has been configured.`,
             },
@@ -315,7 +315,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/default-branch',
+            url: '/admin/default-branch',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -334,7 +334,7 @@ export class SystemMaintenanceService {
     public static getControlPlanePublicKey(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/config/control-plane.pem',
+            url: '/admin/git/mesh/config/control-plane.pem',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to call this resource.`,
             },
@@ -351,7 +351,7 @@ export class SystemMaintenanceService {
     public static connectivity(): CancelablePromise<RestMeshConnectivityReport> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/diagnostics/connectivity',
+            url: '/admin/git/mesh/diagnostics/connectivity',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to call this resource.`,
             },
@@ -368,7 +368,7 @@ export class SystemMaintenanceService {
     public static getAllRegisteredMeshNodes(): CancelablePromise<RestMeshNode> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/nodes',
+            url: '/admin/git/mesh/nodes',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to call this resource.`,
             },
@@ -388,7 +388,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestMeshNode> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/git/mesh/nodes',
+            url: '/admin/git/mesh/nodes',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -413,7 +413,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/git/mesh/nodes/{id}',
+            url: '/admin/git/mesh/nodes/{id}',
             path: {
                 'id': id,
             },
@@ -436,7 +436,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestMeshNode> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/nodes/{id}',
+            url: '/admin/git/mesh/nodes/{id}',
             path: {
                 'id': id,
             },
@@ -462,7 +462,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestMeshNode> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/git/mesh/nodes/{id}',
+            url: '/admin/git/mesh/nodes/{id}',
             path: {
                 'id': id,
             },
@@ -485,7 +485,7 @@ export class SystemMaintenanceService {
     public static getSupportZips(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/support-zips',
+            url: '/admin/git/mesh/support-zips',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to call this resource.`,
             },
@@ -505,7 +505,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/git/mesh/support-zips/{id}',
+            url: '/admin/git/mesh/support-zips/{id}',
             path: {
                 'id': id,
             },
@@ -526,7 +526,7 @@ export class SystemMaintenanceService {
     public static get2(): CancelablePromise<RestBitbucketLicense> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/license',
+            url: '/admin/license',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to view the license, or the request is anonymous.`,
                 404: `No license has been installed.`,
@@ -555,7 +555,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestBitbucketLicense> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/license',
+            url: '/admin/license',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -576,7 +576,7 @@ export class SystemMaintenanceService {
     public static deleteMailConfig(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/mail-server',
+            url: '/admin/mail-server',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to delete the mail server configuration.`,
             },
@@ -593,7 +593,7 @@ export class SystemMaintenanceService {
     public static getMailConfig(): CancelablePromise<RestMailConfiguration> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/mail-server',
+            url: '/admin/mail-server',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve the mail configuration.`,
                 404: `The mail server hasn't been configured`,
@@ -623,7 +623,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestMailConfiguration> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/mail-server',
+            url: '/admin/mail-server',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -643,7 +643,7 @@ export class SystemMaintenanceService {
     public static clearSenderAddress(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/mail-server/sender-address',
+            url: '/admin/mail-server/sender-address',
             errors: {
                 401: `The currently authenticated user has insufficient permissions toclear the server email address.`,
             },
@@ -658,7 +658,7 @@ export class SystemMaintenanceService {
     public static getSenderAddress(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/mail-server/sender-address',
+            url: '/admin/mail-server/sender-address',
             errors: {
                 401: `he currently authenticated user has insufficient permissions to retrieve the server email address.`,
             },
@@ -678,7 +678,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/mail-server/sender-address',
+            url: '/admin/mail-server/sender-address',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -712,7 +712,7 @@ export class SystemMaintenanceService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/rate-limit/history',
+            url: '/admin/rate-limit/history',
             query: {
                 'order': order,
                 'start': start,
@@ -735,7 +735,7 @@ export class SystemMaintenanceService {
     public static getSettings3(): CancelablePromise<RestRateLimitSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/rate-limit/settings',
+            url: '/admin/rate-limit/settings',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve rate limit settings.`,
             },
@@ -757,7 +757,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestRateLimitSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/rate-limit/settings',
+            url: '/admin/rate-limit/settings',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -796,7 +796,7 @@ export class SystemMaintenanceService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/rate-limit/settings/users',
+            url: '/admin/rate-limit/settings/users',
             query: {
                 'filter': filter,
                 'start': start,
@@ -821,7 +821,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestUserRateLimitSettings> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/rate-limit/settings/users',
+            url: '/admin/rate-limit/settings/users',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -852,7 +852,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/rate-limit/settings/users/{userSlug}',
+            url: '/admin/rate-limit/settings/users/{userSlug}',
             path: {
                 'userSlug': userSlug,
             },
@@ -876,7 +876,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestUserRateLimitSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/rate-limit/settings/users/{userSlug}',
+            url: '/admin/rate-limit/settings/users/{userSlug}',
             path: {
                 'userSlug': userSlug,
             },
@@ -902,7 +902,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestUserRateLimitSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/rate-limit/settings/users/{userSlug}',
+            url: '/admin/rate-limit/settings/users/{userSlug}',
             path: {
                 'userSlug': userSlug,
             },
@@ -931,7 +931,7 @@ export class SystemMaintenanceService {
     public static getApplicationProperties(): CancelablePromise<RestApplicationProperties> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/application-properties',
+            url: '/application-properties',
         });
     }
     /**
@@ -948,7 +948,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestHookScript> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/hook-scripts',
+            url: '/hook-scripts',
             formData: formData,
             mediaType: 'multipart/form-data',
             errors: {
@@ -971,7 +971,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/hook-scripts/{scriptId}',
+            url: '/hook-scripts/{scriptId}',
             path: {
                 'scriptId': scriptId,
             },
@@ -993,7 +993,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestHookScript> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/hook-scripts/{scriptId}',
+            url: '/hook-scripts/{scriptId}',
             path: {
                 'scriptId': scriptId,
             },
@@ -1019,7 +1019,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestHookScript> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/hook-scripts/{scriptId}',
+            url: '/hook-scripts/{scriptId}',
             path: {
                 'scriptId': scriptId,
             },
@@ -1047,7 +1047,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/hook-scripts/{scriptId}/content',
+            url: '/hook-scripts/{scriptId}/content',
             path: {
                 'scriptId': scriptId,
             },
@@ -1082,7 +1082,7 @@ export class SystemMaintenanceService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/labels',
+            url: '/labels',
             query: {
                 'prefix': prefix,
                 'start': start,
@@ -1107,7 +1107,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestLabel> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/labels/{labelName}',
+            url: '/labels/{labelName}',
             path: {
                 'labelName': labelName,
             },
@@ -1144,7 +1144,7 @@ export class SystemMaintenanceService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/labels/{labelName}/labeled',
+            url: '/labels/{labelName}/labeled',
             path: {
                 'labelName': labelName,
             },
@@ -1174,7 +1174,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestLogLevel> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/logs/logger/{loggerName}',
+            url: '/logs/logger/{loggerName}',
             path: {
                 'loggerName': loggerName,
             },
@@ -1199,7 +1199,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/logs/logger/{loggerName}/{levelName}',
+            url: '/logs/logger/{loggerName}/{levelName}',
             path: {
                 'levelName': levelName,
                 'loggerName': loggerName,
@@ -1221,7 +1221,7 @@ export class SystemMaintenanceService {
     public static getRootLevel(): CancelablePromise<RestLogLevel> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/logs/rootLogger',
+            url: '/logs/rootLogger',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve the log level.`,
             },
@@ -1241,7 +1241,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/logs/rootLogger/{levelName}',
+            url: '/logs/rootLogger/{levelName}',
             path: {
                 'levelName': levelName,
             },
@@ -1262,7 +1262,7 @@ export class SystemMaintenanceService {
     public static getSettings2(): CancelablePromise<RestLoggingSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/logs/settings',
+            url: '/logs/settings',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve these settings.`,
             },
@@ -1285,7 +1285,7 @@ export class SystemMaintenanceService {
     ): CancelablePromise<RestLoggingSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/logs/settings',
+            url: '/logs/settings',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -1359,7 +1359,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<RestJob> {
                     return __request(OpenAPI, {
                         method: 'POST',
-                        url: '/api/latest/migration/exports',
+                        url: '/migration/exports',
                         body: requestBody,
                         mediaType: 'application/json',
                         errors: {
@@ -1393,7 +1393,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<RestScopesExample> {
                     return __request(OpenAPI, {
                         method: 'POST',
-                        url: '/api/latest/migration/exports/preview',
+                        url: '/migration/exports/preview',
                         body: requestBody,
                         mediaType: 'application/json',
                         errors: {
@@ -1416,7 +1416,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<RestJob> {
                     return __request(OpenAPI, {
                         method: 'GET',
-                        url: '/api/latest/migration/exports/{jobId}',
+                        url: '/migration/exports/{jobId}',
                         path: {
                             'jobId': jobId,
                         },
@@ -1446,7 +1446,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<void> {
                     return __request(OpenAPI, {
                         method: 'POST',
-                        url: '/api/latest/migration/exports/{jobId}/cancel',
+                        url: '/migration/exports/{jobId}/cancel',
                         path: {
                             'jobId': jobId,
                         },
@@ -1492,7 +1492,7 @@ export class SystemMaintenanceService {
                 }> {
                     return __request(OpenAPI, {
                         method: 'GET',
-                        url: '/api/latest/migration/exports/{jobId}/messages',
+                        url: '/migration/exports/{jobId}/messages',
                         path: {
                             'jobId': jobId,
                         },
@@ -1526,7 +1526,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<RestJob> {
                     return __request(OpenAPI, {
                         method: 'POST',
-                        url: '/api/latest/migration/imports',
+                        url: '/migration/imports',
                         body: requestBody,
                         mediaType: 'application/json',
                         errors: {
@@ -1550,7 +1550,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<RestJob> {
                     return __request(OpenAPI, {
                         method: 'GET',
-                        url: '/api/latest/migration/imports/{jobId}',
+                        url: '/migration/imports/{jobId}',
                         path: {
                             'jobId': jobId,
                         },
@@ -1584,7 +1584,7 @@ export class SystemMaintenanceService {
                 ): CancelablePromise<void> {
                     return __request(OpenAPI, {
                         method: 'POST',
-                        url: '/api/latest/migration/imports/{jobId}/cancel',
+                        url: '/migration/imports/{jobId}/cancel',
                         path: {
                             'jobId': jobId,
                         },
@@ -1630,7 +1630,7 @@ export class SystemMaintenanceService {
                 }> {
                     return __request(OpenAPI, {
                         method: 'GET',
-                        url: '/api/latest/migration/imports/{jobId}/messages',
+                        url: '/migration/imports/{jobId}/messages',
                         path: {
                             'jobId': jobId,
                         },
@@ -1721,7 +1721,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestJob> {
                                     return __request(OpenAPI, {
                                         method: 'POST',
-                                        url: '/api/latest/migration/mesh',
+                                        url: '/migration/mesh',
                                         body: requestBody,
                                         mediaType: 'application/json',
                                         errors: {
@@ -1753,7 +1753,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<ExamplePreviewMigration> {
                                     return __request(OpenAPI, {
                                         method: 'POST',
-                                        url: '/api/latest/migration/mesh/preview',
+                                        url: '/migration/mesh/preview',
                                         body: requestBody,
                                         mediaType: 'application/json',
                                         errors: {
@@ -1801,7 +1801,7 @@ export class SystemMaintenanceService {
                                 }> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/repos',
+                                        url: '/migration/mesh/repos',
                                         query: {
                                             'migrationId': migrationId,
                                             'projectKey': projectKey,
@@ -1841,7 +1841,7 @@ export class SystemMaintenanceService {
                                 }> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/summaries',
+                                        url: '/migration/mesh/summaries',
                                         query: {
                                             'start': start,
                                             'limit': limit,
@@ -1862,7 +1862,7 @@ export class SystemMaintenanceService {
                                 public static getActiveMeshMigrationSummary(): CancelablePromise<RestMeshMigrationSummary> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/summary',
+                                        url: '/migration/mesh/summary',
                                         errors: {
                                             401: `The currently authenticated user has insufficient permissions to call this resource.`,
                                             404: `No active migration job found.`,
@@ -1883,7 +1883,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<any> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/{jobId}',
+                                        url: '/migration/mesh/{jobId}',
                                         path: {
                                             'jobId': jobId,
                                         },
@@ -1914,7 +1914,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<void> {
                                     return __request(OpenAPI, {
                                         method: 'POST',
-                                        url: '/api/latest/migration/mesh/{jobId}/cancel',
+                                        url: '/migration/mesh/{jobId}/cancel',
                                         path: {
                                             'jobId': jobId,
                                         },
@@ -1961,7 +1961,7 @@ export class SystemMaintenanceService {
                                 }> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/{jobId}/messages',
+                                        url: '/migration/mesh/{jobId}/messages',
                                         path: {
                                             'jobId': jobId,
                                         },
@@ -1992,7 +1992,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestMeshMigrationSummary> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/migration/mesh/{jobId}/summary',
+                                        url: '/migration/mesh/{jobId}/summary',
                                         path: {
                                             'jobId': jobId,
                                         },
@@ -2061,7 +2061,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestApplicationUser> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/users',
+                                        url: '/users',
                                         query: {
                                             'filter': filter,
                                             'permission.N': permissionN,
@@ -2092,7 +2092,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestApplicationUser> {
                                     return __request(OpenAPI, {
                                         method: 'PUT',
-                                        url: '/api/latest/users',
+                                        url: '/users',
                                         body: requestBody,
                                         mediaType: 'application/json',
                                         errors: {
@@ -2113,7 +2113,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<void> {
                                     return __request(OpenAPI, {
                                         method: 'PUT',
-                                        url: '/api/latest/users/credentials',
+                                        url: '/users/credentials',
                                         body: requestBody,
                                         mediaType: 'application/json',
                                         errors: {
@@ -2135,7 +2135,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestApplicationUser> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/users/{userSlug}',
+                                        url: '/users/{userSlug}',
                                         path: {
                                             'userSlug': userSlug,
                                         },
@@ -2162,7 +2162,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<RestNamedLink> {
                                     return __request(OpenAPI, {
                                         method: 'DELETE',
-                                        url: '/api/latest/users/{userSlug}/avatar.png',
+                                        url: '/users/{userSlug}/avatar.png',
                                         path: {
                                             'userSlug': userSlug,
                                         },
@@ -2192,7 +2192,7 @@ export class SystemMaintenanceService {
                                  *
                                  * An example <a href="http://curl.haxx.se/">curl</a> request to upload an image name 'avatar.png' would be:
                                  * ```
-                                 * curl -X POST -u username:password -H "X-Atlassian-Token: no-check" http://example.com/rest/api/latest/users/jdoe/avatar.png -F avatar=@avatar.png
+                                 * curl -X POST -u username:password -H "X-Atlassian-Token: no-check" http://example.com/rest/users/jdoe/avatar.png -F avatar=@avatar.png
                                  * ```
                                  *
                                  *
@@ -2212,7 +2212,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<string> {
                                     return __request(OpenAPI, {
                                         method: 'POST',
-                                        url: '/api/latest/users/{userSlug}/avatar.png',
+                                        url: '/users/{userSlug}/avatar.png',
                                         path: {
                                             'userSlug': userSlug,
                                         },
@@ -2240,7 +2240,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<ExampleSettingsMap> {
                                     return __request(OpenAPI, {
                                         method: 'GET',
-                                        url: '/api/latest/users/{userSlug}/settings',
+                                        url: '/users/{userSlug}/settings',
                                         path: {
                                             'userSlug': userSlug,
                                         },
@@ -2264,7 +2264,7 @@ export class SystemMaintenanceService {
                                 ): CancelablePromise<void> {
                                     return __request(OpenAPI, {
                                         method: 'POST',
-                                        url: '/api/latest/users/{userSlug}/settings',
+                                        url: '/users/{userSlug}/settings',
                                         path: {
                                             'userSlug': userSlug,
                                         },

@@ -204,7 +204,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -239,7 +239,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -270,7 +270,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -299,7 +299,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -331,7 +331,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -354,7 +354,7 @@ export class SecurityService {
     public static deleteExemptRepo(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
             errors: {
                 401: `The authenticated user is not permitted to delete an exempt repository`,
             },
@@ -369,7 +369,7 @@ export class SecurityService {
     public static isRepoExempt(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
             errors: {
                 401: `The authenticated user is not permitted to check whether a repository is exempt from secret scanning`,
             },
@@ -389,7 +389,7 @@ export class SecurityService {
     public static addExemptRepo(): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt',
             errors: {
                 401: `The authenticated user is not permitted to exempt a repository from secret scanning`,
                 409: `At least one of specified repositories have already been previously made exempt.`,
@@ -427,7 +427,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -462,7 +462,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -493,7 +493,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -522,7 +522,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -554,7 +554,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -597,7 +597,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/allowlist',
+            url: '/projects/{projectKey}/secret-scanning/allowlist',
             path: {
                 'projectKey': projectKey,
             },
@@ -629,7 +629,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/allowlist',
+            url: '/projects/{projectKey}/secret-scanning/allowlist',
             path: {
                 'projectKey': projectKey,
             },
@@ -657,7 +657,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -683,7 +683,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -712,7 +712,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningAllowlistRule> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}',
+            url: '/projects/{projectKey}/secret-scanning/allowlist/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -748,7 +748,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/exempt',
+            url: '/projects/{projectKey}/secret-scanning/exempt',
             query: {
                 'order': order,
                 'start': start,
@@ -771,7 +771,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/exempt',
+            url: '/projects/{projectKey}/secret-scanning/exempt',
             body: requestBody,
             mediaType: '*/*',
             errors: {
@@ -808,7 +808,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/rules',
+            url: '/projects/{projectKey}/secret-scanning/rules',
             path: {
                 'projectKey': projectKey,
             },
@@ -840,7 +840,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/rules',
+            url: '/projects/{projectKey}/secret-scanning/rules',
             path: {
                 'projectKey': projectKey,
             },
@@ -868,7 +868,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -894,7 +894,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -923,7 +923,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/secret-scanning/rules/{id}',
+            url: '/projects/{projectKey}/secret-scanning/rules/{id}',
             path: {
                 'projectKey': projectKey,
                 'id': id,
@@ -959,7 +959,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/secret-scanning/exempt',
+            url: '/secret-scanning/exempt',
             query: {
                 'order': order,
                 'start': start,
@@ -982,7 +982,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/secret-scanning/exempt',
+            url: '/secret-scanning/exempt',
             body: requestBody,
             mediaType: '*/*',
             errors: {
@@ -1016,7 +1016,7 @@ export class SecurityService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/secret-scanning/rules',
+            url: '/secret-scanning/rules',
             query: {
                 'filter': filter,
                 'order': order,
@@ -1041,7 +1041,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/secret-scanning/rules',
+            url: '/secret-scanning/rules',
             body: requestBody,
             mediaType: '*/*',
             errors: {
@@ -1062,7 +1062,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/secret-scanning/rules/{id}',
+            url: '/secret-scanning/rules/{id}',
             path: {
                 'id': id,
             },
@@ -1083,7 +1083,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/secret-scanning/rules/{id}',
+            url: '/secret-scanning/rules/{id}',
             path: {
                 'id': id,
             },
@@ -1107,7 +1107,7 @@ export class SecurityService {
     ): CancelablePromise<RestSecretScanningRule> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/secret-scanning/rules/{id}',
+            url: '/secret-scanning/rules/{id}',
             path: {
                 'id': id,
             },
@@ -1130,7 +1130,7 @@ export class SecurityService {
     public static getAllCertificates(): CancelablePromise<RestX509Certificate> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/signing/x509-certificates',
+            url: '/signing/x509-certificates',
             errors: {
                 401: `The authenticated user is not permitted to get X.509 certificates`,
             },
@@ -1150,7 +1150,7 @@ export class SecurityService {
     ): CancelablePromise<RestX509Certificate> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/signing/x509-certificates',
+            url: '/signing/x509-certificates',
             formData: formData,
             mediaType: 'multipart/form-data',
             errors: {
@@ -1177,7 +1177,7 @@ export class SecurityService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/signing/x509-certificates/crl/{id}',
+            url: '/signing/x509-certificates/crl/{id}',
             path: {
                 'id': id,
             },
@@ -1201,7 +1201,7 @@ export class SecurityService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/signing/x509-certificates/{id}',
+            url: '/signing/x509-certificates/{id}',
             path: {
                 'id': id,
             },
@@ -1220,7 +1220,7 @@ export class SecurityService {
     public static getSystemSigningConfiguration(): CancelablePromise<RestSystemSigningConfiguration> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/system-signing/configuration',
+            url: '/system-signing/configuration',
             errors: {
                 401: `The currently authenticated user has insufficient permissions to retrieve the configuration details for system signing Git objects.`,
             },
@@ -1240,7 +1240,7 @@ export class SecurityService {
     ): CancelablePromise<RestSystemSigningConfiguration> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/system-signing/configuration',
+            url: '/system-signing/configuration',
             body: requestBody,
             mediaType: 'application/json',
             errors: {

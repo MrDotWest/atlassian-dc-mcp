@@ -16,7 +16,7 @@ export class CapabilitiesService {
     public static getCapabilities(): CancelablePromise<RestBuildCapabilities> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/build/capabilities',
+            url: '/build/capabilities',
         });
     }
     /**
@@ -28,7 +28,7 @@ export class CapabilitiesService {
     public static getCapabilities1(): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/deployment/capabilities',
+            url: '/deployment/capabilities',
             errors: {
                 404: `This instance of Bitbucket Data Center does not support deployments (for example, it has been disabled using the property 'plugin.deployment.capability.disabled').`,
             },

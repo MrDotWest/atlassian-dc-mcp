@@ -149,7 +149,7 @@ export class DeprecatedService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups/add-user',
+            url: '/admin/groups/add-user',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -178,7 +178,7 @@ export class DeprecatedService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups/remove-user',
+            url: '/admin/groups/remove-user',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -207,7 +207,7 @@ export class DeprecatedService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/add-group',
+            url: '/admin/users/add-group',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -236,7 +236,7 @@ export class DeprecatedService {
     ): CancelablePromise<RestBranch> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches/default',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/branches/default',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -268,7 +268,7 @@ export class DeprecatedService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches/default',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/branches/default',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -302,7 +302,7 @@ export class DeprecatedService {
     ): CancelablePromise<RestPullRequestParticipant> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
             path: {
                 'projectKey': projectKey,
                 'pullRequestId': pullRequestId,
@@ -336,7 +336,7 @@ export class DeprecatedService {
     ): CancelablePromise<RestPullRequestParticipant> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
             path: {
                 'projectKey': projectKey,
                 'pullRequestId': pullRequestId,
@@ -376,7 +376,7 @@ export class DeprecatedService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
             path: {
                 'projectKey': projectKey,
                 'pullRequestId': pullRequestId,

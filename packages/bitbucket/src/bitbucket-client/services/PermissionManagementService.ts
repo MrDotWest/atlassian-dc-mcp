@@ -36,7 +36,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestDetailedGroup> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/groups',
+            url: '/admin/groups',
             query: {
                 'name': name,
             },
@@ -74,7 +74,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/groups',
+            url: '/admin/groups',
             query: {
                 'filter': filter,
                 'start': start,
@@ -99,7 +99,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestDetailedGroup> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups',
+            url: '/admin/groups',
             query: {
                 'name': name,
             },
@@ -129,7 +129,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups/add-user',
+            url: '/admin/groups/add-user',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -153,7 +153,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups/add-users',
+            url: '/admin/groups/add-users',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -188,7 +188,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/groups/more-members',
+            url: '/admin/groups/more-members',
             query: {
                 'filter': filter,
                 'context': context,
@@ -225,7 +225,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/groups/more-non-members',
+            url: '/admin/groups/more-non-members',
             query: {
                 'filter': filter,
                 'context': context,
@@ -256,7 +256,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/groups/remove-user',
+            url: '/admin/groups/remove-user',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -290,7 +290,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/permissions/groups',
+            url: '/admin/permissions/groups',
             query: {
                 'name': name,
             },
@@ -329,7 +329,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/permissions/groups',
+            url: '/admin/permissions/groups',
             query: {
                 'filter': filter,
                 'start': start,
@@ -374,7 +374,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/permissions/groups',
+            url: '/admin/permissions/groups',
             query: {
                 'name': name,
                 'permission': permission,
@@ -417,7 +417,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/permissions/groups/none',
+            url: '/admin/permissions/groups/none',
             query: {
                 'filter': filter,
                 'start': start,
@@ -450,7 +450,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/permissions/users',
+            url: '/admin/permissions/users',
             query: {
                 'name': name,
             },
@@ -489,7 +489,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/permissions/users',
+            url: '/admin/permissions/users',
             query: {
                 'filter': filter,
                 'start': start,
@@ -534,7 +534,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/permissions/users',
+            url: '/admin/permissions/users',
             query: {
                 'name': name,
                 'permission': permission,
@@ -577,7 +577,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/permissions/users/none',
+            url: '/admin/permissions/users/none',
             query: {
                 'filter': filter,
                 'start': start,
@@ -602,7 +602,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestUserDirectory> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/user-directories',
+            url: '/admin/user-directories',
             query: {
                 'includeInactive': includeInactive,
             },
@@ -627,7 +627,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestDetailedUser> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/users',
+            url: '/admin/users',
             query: {
                 'name': name,
             },
@@ -665,7 +665,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/users',
+            url: '/admin/users',
             query: {
                 'filter': filter,
                 'start': start,
@@ -702,7 +702,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users',
+            url: '/admin/users',
             query: {
                 'emailAddress': emailAddress,
                 'password': password,
@@ -733,7 +733,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestDetailedUser> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/users',
+            url: '/admin/users',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -762,7 +762,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/add-group',
+            url: '/admin/users/add-group',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -786,7 +786,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/add-groups',
+            url: '/admin/users/add-groups',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -810,7 +810,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/admin/users/captcha',
+            url: '/admin/users/captcha',
             query: {
                 'name': name,
             },
@@ -836,7 +836,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/admin/users/credentials',
+            url: '/admin/users/credentials',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -864,7 +864,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/users/erasure',
+            url: '/admin/users/erasure',
             query: {
                 'name': name,
             },
@@ -898,7 +898,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestErasedUser> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/erasure',
+            url: '/admin/users/erasure',
             query: {
                 'name': name,
             },
@@ -935,7 +935,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/users/more-members',
+            url: '/admin/users/more-members',
             query: {
                 'filter': filter,
                 'context': context,
@@ -972,7 +972,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/users/more-non-members',
+            url: '/admin/users/more-non-members',
             query: {
                 'filter': filter,
                 'context': context,
@@ -1000,7 +1000,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/remove-group',
+            url: '/admin/users/remove-group',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -1024,7 +1024,7 @@ export class PermissionManagementService {
     ): CancelablePromise<RestDetailedUser> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/admin/users/rename',
+            url: '/admin/users/rename',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -1059,7 +1059,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/groups',
+            url: '/groups',
             query: {
                 'filter': filter,
                 'start': start,
@@ -1092,7 +1092,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1129,7 +1129,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1173,7 +1173,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1216,7 +1216,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/groups',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1262,7 +1262,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups/none',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/groups/none',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1304,7 +1304,7 @@ export class PermissionManagementService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/search',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/search',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1336,7 +1336,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1380,7 +1380,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1418,7 +1418,7 @@ export class PermissionManagementService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/users',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1464,7 +1464,7 @@ export class PermissionManagementService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users/none',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/permissions/users/none',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
