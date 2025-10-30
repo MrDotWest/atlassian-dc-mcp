@@ -128,6 +128,47 @@ export class BitbucketService {
   }
 
   /**
+   * Get pull requests for a repository
+   * @param projectKey The project key
+   * @param repositorySlug The repository slug
+   * @param state Optional state filter: 'OPEN', 'DECLINED', 'MERGED', or 'ALL'
+   * @param at Optional branch ID to filter by
+   * @param direction Optional direction: 'INCOMING' or 'OUTGOING'
+   * @param order Optional order: 'NEWEST' or 'OLDEST'
+   * @param start Optional pagination start
+   * @param limit Optional pagination limit (default: 25)
+   * @returns Promise with pull requests data
+   */
+  async getPullRequests(
+    projectKey: string,
+    repositorySlug: string,
+    state?: string,
+    at?: string,
+    direction?: string,
+    order?: string,
+    start?: number,
+    limit: number = 25
+  ) {
+    return handleApiOperation(
+      () => PullRequestsService.getPage(
+        projectKey,
+        repositorySlug,
+        undefined, // withAttributes
+        at,
+        undefined, // withProperties
+        undefined, // draft
+        undefined, // filterText
+        state,
+        order,
+        direction,
+        start,
+        limit
+      ),
+      'Error fetching pull requests'
+    );
+  }
+
+  /**
    * Get pull request changes
    * @param projectKey The project key
    * @param repositorySlug The repository slug
@@ -263,32 +304,19 @@ export class BitbucketService {
     whitespace?: string
   ) {
     return handleApiOperation(
-      () => __request(OpenAPI, {
-        method: 'GET',
-        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}',
-        path: {
-          'path': path,
-          'projectKey': projectKey,
-          'pullRequestId': pullRequestId,
-          'repositorySlug': repositorySlug,
-        },
-        query: {
-          'contextLines': contextLines,
-          'sinceId': sinceId,
-          'srcPath': srcPath,
-          'diffType': diffType,
-          'untilId': untilId,
-          'whitespace': whitespace,
-        },
-        headers: {
-          'Accept': 'text/plain'
-        },
-        errors: {
-          400: `If the request was malformed.`,
-          401: `The currently authenticated user has insufficient permissions to view the repository or pull request.`,
-          404: `The repository or pull request does not exist.`,
-        },
-      }),
+      () => PullRequestsService.streamDiff2(
+        path,
+        projectKey,
+        pullRequestId,
+        repositorySlug,
+        "diff",
+        contextLines,
+        sinceId,
+        srcPath,
+        diffType,
+        untilId,
+        whitespace
+      ),
       'Error fetching pull request diff'
     );
   }
@@ -332,6 +360,16 @@ export const bitbucketToolSchemas = {
     path: z.string().optional().describe("Optional path to filter commits by"),
     since: z.string().optional().describe("The commit ID (exclusively) to retrieve commits after"),
     until: z.string().optional().describe("The commit ID (inclusively) to retrieve commits before"),
+    limit: z.number().optional().default(25).describe("Number of items to return")
+  },
+  getPullRequests: {
+    projectKey: z.string().describe("The project key"),
+    repositorySlug: z.string().describe("The repository slug"),
+    state: z.string().optional().describe("Optional state filter: 'OPEN', 'DECLINED', 'MERGED', or 'ALL' (defaults to OPEN)"),
+    at: z.string().optional().describe("Optional branch ID to filter by (e.g., refs/heads/master)"),
+    direction: z.string().optional().describe("Optional direction: 'INCOMING' or 'OUTGOING' (defaults to INCOMING)"),
+    order: z.string().optional().describe("Optional order: 'NEWEST' or 'OLDEST' (defaults to NEWEST)"),
+    start: z.number().optional().describe("Start number for pagination"),
     limit: z.number().optional().default(25).describe("Number of items to return")
   },
   getPullRequestComments: {
