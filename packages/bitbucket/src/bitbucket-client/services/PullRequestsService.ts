@@ -457,7 +457,7 @@ export class PullRequestsService {
     ): CancelablePromise<RestPullRequestMergeConfig> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/admin/pull-requests/{scmId}',
+            url: '/admin/pull-requests/{scmId}',
             path: {
                 'scmId': scmId,
             },
@@ -496,7 +496,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequestMergeConfig> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/admin/pull-requests/{scmId}',
+                url: '/admin/pull-requests/{scmId}',
                 path: {
                     'scmId': scmId,
                 },
@@ -539,7 +539,7 @@ export class PullRequestsService {
         }> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/pull-requests',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/pull-requests',
                 path: {
                     'projectKey': projectKey,
                     'commitId': commitId,
@@ -588,7 +588,7 @@ export class PullRequestsService {
         }> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/participants',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/participants',
                 path: {
                     'projectKey': projectKey,
                     'repositorySlug': repositorySlug,
@@ -655,7 +655,7 @@ export class PullRequestsService {
         }> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests',
                 path: {
                     'projectKey': projectKey,
                     'repositorySlug': repositorySlug,
@@ -699,7 +699,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequest> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests',
                 path: {
                     'projectKey': projectKey,
                     'repositorySlug': repositorySlug,
@@ -748,7 +748,7 @@ export class PullRequestsService {
         ): CancelablePromise<void> {
             return __request(OpenAPI, {
                 method: 'DELETE',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -781,7 +781,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequest> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -821,7 +821,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequest> {
             return __request(OpenAPI, {
                 method: 'PUT',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -871,7 +871,7 @@ export class PullRequestsService {
         ): CancelablePromise<any> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.diff',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.diff',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -905,7 +905,7 @@ export class PullRequestsService {
         ): CancelablePromise<any> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.patch',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.patch',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -954,7 +954,7 @@ export class PullRequestsService {
         }> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/activities',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/activities',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -994,7 +994,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequestParticipant> {
             return __request(OpenAPI, {
                 method: 'DELETE',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1028,7 +1028,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestPullRequestParticipant> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1059,7 +1059,7 @@ export class PullRequestsService {
         ): CancelablePromise<void> {
             return __request(OpenAPI, {
                 method: 'DELETE',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1090,7 +1090,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestAutoMergeRequest> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1120,7 +1120,7 @@ export class PullRequestsService {
         ): CancelablePromise<RestAutoMergeProcessingResult> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1169,7 +1169,7 @@ export class PullRequestsService {
         }> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments',
+                url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments',
                 path: {
                     'projectKey': projectKey,
                     'pullRequestId': pullRequestId,
@@ -1282,7 +1282,7 @@ export class PullRequestsService {
                                     ): CancelablePromise<RestComment> {
                                         return __request(OpenAPI, {
                                             method: 'POST',
-                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments',
+                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments',
                                             path: {
                                                 'projectKey': projectKey,
                                                 'pullRequestId': pullRequestId,
@@ -1320,7 +1320,7 @@ export class PullRequestsService {
                                     ): CancelablePromise<void> {
                                         return __request(OpenAPI, {
                                             method: 'DELETE',
-                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
+                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
                                             path: {
                                                 'projectKey': projectKey,
                                                 'commentId': commentId,
@@ -1357,7 +1357,7 @@ export class PullRequestsService {
                                     ): CancelablePromise<RestComment> {
                                         return __request(OpenAPI, {
                                             method: 'GET',
-                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
+                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
                                             path: {
                                                 'projectKey': projectKey,
                                                 'commentId': commentId,
@@ -1426,7 +1426,7 @@ export class PullRequestsService {
                                                 ): CancelablePromise<RestComment> {
                                                     return __request(OpenAPI, {
                                                         method: 'PUT',
-                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
+                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}',
                                                         path: {
                                                             'projectKey': projectKey,
                                                             'commentId': commentId,
@@ -1477,7 +1477,7 @@ export class PullRequestsService {
                                                 ): CancelablePromise<RestChange> {
                                                     return __request(OpenAPI, {
                                                         method: 'GET',
-                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/changes',
+                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/changes',
                                                         path: {
                                                             'projectKey': projectKey,
                                                             'pullRequestId': pullRequestId,
@@ -1542,7 +1542,7 @@ export class PullRequestsService {
                                                 }> {
                                                     return __request(OpenAPI, {
                                                         method: 'GET',
-                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments',
+                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments',
                                                         path: {
                                                             'projectKey': projectKey,
                                                             'pullRequestId': pullRequestId,
@@ -1660,7 +1660,7 @@ export class PullRequestsService {
                                                                                     ): CancelablePromise<RestComment> {
                                                                                         return __request(OpenAPI, {
                                                                                             method: 'POST',
-                                                                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments',
+                                                                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments',
                                                                                             path: {
                                                                                                 'projectKey': projectKey,
                                                                                                 'pullRequestId': pullRequestId,
@@ -1698,7 +1698,7 @@ export class PullRequestsService {
                                                                                     ): CancelablePromise<void> {
                                                                                         return __request(OpenAPI, {
                                                                                             method: 'DELETE',
-                                                                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
+                                                                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
                                                                                             path: {
                                                                                                 'projectKey': projectKey,
                                                                                                 'commentId': commentId,
@@ -1735,7 +1735,7 @@ export class PullRequestsService {
                                                                                     ): CancelablePromise<RestComment> {
                                                                                         return __request(OpenAPI, {
                                                                                             method: 'GET',
-                                                                                            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
+                                                                                            url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
                                                                                             path: {
                                                                                                 'projectKey': projectKey,
                                                                                                 'commentId': commentId,
@@ -1796,7 +1796,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestComment> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'PUT',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'commentId': commentId,
@@ -1833,7 +1833,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/apply-suggestion',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/apply-suggestion',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'commentId': commentId,
@@ -1866,7 +1866,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestCommitMessageSuggestion> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commit-message-suggestion',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commit-message-suggestion',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -1913,7 +1913,7 @@ export class PullRequestsService {
                                                                                                 }> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commits',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commits',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -1954,7 +1954,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequest> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/decline',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/decline',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2002,7 +2002,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestDiffStatsSummary> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff-stats-summary/{path}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff-stats-summary/{path}',
                                                                                                         path: {
                                                                                                             'path': path,
                                                                                                             'projectKey': projectKey,
@@ -2065,7 +2065,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestDiff> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}',
                                                                                                         path: {
                                                                                                             'path': path,
                                                                                                             'projectKey': projectKey,
@@ -2114,7 +2114,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequestMergeability> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2149,7 +2149,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequest> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2192,7 +2192,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestCommit> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge-base',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge-base',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2230,7 +2230,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2275,7 +2275,7 @@ export class PullRequestsService {
                                                                                                 }> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2315,7 +2315,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequestParticipant> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2355,7 +2355,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'userSlug': userSlug,
@@ -2398,7 +2398,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequestParticipant> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'PUT',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'userSlug': userSlug,
@@ -2440,7 +2440,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestPullRequest> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/reopen',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/reopen',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2480,7 +2480,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2519,7 +2519,7 @@ export class PullRequestsService {
                                                                                                 }> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2555,7 +2555,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<any> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'PUT',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2592,7 +2592,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2622,7 +2622,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'pullRequestId': pullRequestId,
@@ -2661,7 +2661,7 @@ export class PullRequestsService {
                                                                                                 }> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'repositorySlug': repositorySlug,
@@ -2694,7 +2694,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'repositorySlug': repositorySlug,
@@ -2727,7 +2727,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2757,7 +2757,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2789,7 +2789,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'PUT',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2825,7 +2825,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<Array<RestApplicationUser>> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}/users',
+                                                                                                        url: '/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}/users',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2862,7 +2862,7 @@ export class PullRequestsService {
                                                                                                 }> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/settings/reviewer-groups',
+                                                                                                        url: '/projects/{projectKey}/settings/reviewer-groups',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                         },
@@ -2892,7 +2892,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'POST',
-                                                                                                        url: '/api/latest/projects/{projectKey}/settings/reviewer-groups',
+                                                                                                        url: '/projects/{projectKey}/settings/reviewer-groups',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                         },
@@ -2922,7 +2922,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<void> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'DELETE',
-                                                                                                        url: '/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2949,7 +2949,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'GET',
-                                                                                                        url: '/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,
@@ -2978,7 +2978,7 @@ export class PullRequestsService {
                                                                                                 ): CancelablePromise<RestReviewerGroup> {
                                                                                                     return __request(OpenAPI, {
                                                                                                         method: 'PUT',
-                                                                                                        url: '/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}',
+                                                                                                        url: '/projects/{projectKey}/settings/reviewer-groups/{id}',
                                                                                                         path: {
                                                                                                             'projectKey': projectKey,
                                                                                                             'id': id,

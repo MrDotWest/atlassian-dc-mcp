@@ -336,7 +336,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/hooks/{hookKey}/avatar',
+            url: '/hooks/{hookKey}/avatar',
             path: {
                 'hookKey': hookKey,
             },
@@ -376,7 +376,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects',
+            url: '/projects',
             query: {
                 'name': name,
                 'permission': permission,
@@ -404,7 +404,7 @@ export class ProjectService {
     ): CancelablePromise<RestProject> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects',
+            url: '/projects',
             body: requestBody,
             mediaType: 'application/json',
             errors: {
@@ -428,7 +428,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}',
+            url: '/projects/{projectKey}',
             path: {
                 'projectKey': projectKey,
             },
@@ -453,7 +453,7 @@ export class ProjectService {
     ): CancelablePromise<RestProject> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}',
+            url: '/projects/{projectKey}',
             path: {
                 'projectKey': projectKey,
             },
@@ -484,7 +484,7 @@ export class ProjectService {
     ): CancelablePromise<RestProject> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}',
+            url: '/projects/{projectKey}',
             path: {
                 'projectKey': projectKey,
             },
@@ -513,7 +513,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/avatar.png',
+            url: '/projects/{projectKey}/avatar.png',
             path: {
                 'projectKey': projectKey,
             },
@@ -550,7 +550,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/avatar.png',
+            url: '/projects/{projectKey}/avatar.png',
             path: {
                 'projectKey': projectKey,
             },
@@ -587,7 +587,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/hook-scripts',
+            url: '/projects/{projectKey}/hook-scripts',
             path: {
                 'projectKey': projectKey,
             },
@@ -617,7 +617,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/hook-scripts/{scriptId}',
+            url: '/projects/{projectKey}/hook-scripts/{scriptId}',
             path: {
                 'projectKey': projectKey,
                 'scriptId': scriptId,
@@ -646,7 +646,7 @@ export class ProjectService {
     ): CancelablePromise<RestHookScriptConfig> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/hook-scripts/{scriptId}',
+            url: '/projects/{projectKey}/hook-scripts/{scriptId}',
             path: {
                 'projectKey': projectKey,
                 'scriptId': scriptId,
@@ -680,7 +680,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/permissions',
+            url: '/projects/{projectKey}/permissions',
             path: {
                 'projectKey': projectKey,
             },
@@ -714,7 +714,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/permissions/groups',
+            url: '/projects/{projectKey}/permissions/groups',
             path: {
                 'projectKey': projectKey,
             },
@@ -755,7 +755,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/groups',
+            url: '/projects/{projectKey}/permissions/groups',
             path: {
                 'projectKey': projectKey,
             },
@@ -795,7 +795,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/permissions/groups',
+            url: '/projects/{projectKey}/permissions/groups',
             path: {
                 'projectKey': projectKey,
             },
@@ -838,7 +838,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/groups/none',
+            url: '/projects/{projectKey}/permissions/groups/none',
             path: {
                 'projectKey': projectKey,
             },
@@ -877,7 +877,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/search',
+            url: '/projects/{projectKey}/permissions/search',
             path: {
                 'projectKey': projectKey,
             },
@@ -906,7 +906,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/permissions/users',
+            url: '/projects/{projectKey}/permissions/users',
             path: {
                 'projectKey': projectKey,
             },
@@ -947,7 +947,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/users',
+            url: '/projects/{projectKey}/permissions/users',
             path: {
                 'projectKey': projectKey,
             },
@@ -988,7 +988,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/permissions/users',
+            url: '/projects/{projectKey}/permissions/users',
             path: {
                 'projectKey': projectKey,
             },
@@ -1031,7 +1031,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/users/none',
+            url: '/projects/{projectKey}/permissions/users/none',
             path: {
                 'projectKey': projectKey,
             },
@@ -1069,7 +1069,7 @@ export class ProjectService {
     ): CancelablePromise<RestPermitted> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/permissions/{permission}/all',
+            url: '/projects/{projectKey}/permissions/{permission}/all',
             path: {
                 'projectKey': projectKey,
                 'permission': permission,
@@ -1109,7 +1109,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/permissions/{permission}/all',
+            url: '/projects/{projectKey}/permissions/{permission}/all',
             path: {
                 'projectKey': projectKey,
                 'permission': permission,
@@ -1149,7 +1149,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos',
+            url: '/projects/{projectKey}/repos',
             path: {
                 'projectKey': projectKey,
             },
@@ -1179,7 +1179,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepository> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos',
+            url: '/projects/{projectKey}/repos',
             path: {
                 'projectKey': projectKey,
             },
@@ -1208,7 +1208,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1234,7 +1234,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepository> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1273,7 +1273,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepository> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1311,7 +1311,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepository> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}',
+            url: '/projects/{projectKey}/repos/{repositorySlug}',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1355,7 +1355,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/contributing',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/contributing',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1391,7 +1391,7 @@ export class ProjectService {
     ): CancelablePromise<RestMinimalRef> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/default-branch',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1420,7 +1420,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/default-branch',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1460,7 +1460,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/forks',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/forks',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1503,7 +1503,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/license',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/license',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1549,7 +1549,7 @@ export class ProjectService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/readme',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/readme',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1583,7 +1583,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepository> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/recreate',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/recreate',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1622,7 +1622,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/related',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/related',
             path: {
                 'projectKey': projectKey,
                 'repositorySlug': repositorySlug,
@@ -1659,7 +1659,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/settings-restriction',
+            url: '/projects/{projectKey}/settings-restriction',
             path: {
                 'projectKey': projectKey,
             },
@@ -1699,7 +1699,7 @@ export class ProjectService {
     ): CancelablePromise<RestProjectSettingsRestriction> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings-restriction',
+            url: '/projects/{projectKey}/settings-restriction',
             path: {
                 'projectKey': projectKey,
             },
@@ -1734,7 +1734,7 @@ export class ProjectService {
     ): CancelablePromise<RestProjectSettingsRestriction> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/settings-restriction',
+            url: '/projects/{projectKey}/settings-restriction',
             path: {
                 'projectKey': projectKey,
             },
@@ -1780,7 +1780,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings-restriction/all',
+            url: '/projects/{projectKey}/settings-restriction/all',
             path: {
                 'projectKey': projectKey,
             },
@@ -1813,7 +1813,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/settings/auto-decline',
+            url: '/projects/{projectKey}/settings/auto-decline',
             path: {
                 'projectKey': projectKey,
             },
@@ -1835,7 +1835,7 @@ export class ProjectService {
     ): CancelablePromise<RestAutoDeclineSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/auto-decline',
+            url: '/projects/{projectKey}/settings/auto-decline',
             path: {
                 'projectKey': projectKey,
             },
@@ -1861,7 +1861,7 @@ export class ProjectService {
     ): CancelablePromise<RestAutoDeclineSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/settings/auto-decline',
+            url: '/projects/{projectKey}/settings/auto-decline',
             path: {
                 'projectKey': projectKey,
             },
@@ -1888,7 +1888,7 @@ export class ProjectService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/settings/auto-merge',
+            url: '/projects/{projectKey}/settings/auto-merge',
             path: {
                 'projectKey': projectKey,
             },
@@ -1912,7 +1912,7 @@ export class ProjectService {
     ): CancelablePromise<RestAutoMergeRestrictedSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/auto-merge',
+            url: '/projects/{projectKey}/settings/auto-merge',
             path: {
                 'projectKey': projectKey,
             },
@@ -1938,7 +1938,7 @@ export class ProjectService {
     ): CancelablePromise<RestAutoMergeRestrictedSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/settings/auto-merge',
+            url: '/projects/{projectKey}/settings/auto-merge',
             path: {
                 'projectKey': projectKey,
             },
@@ -1978,7 +1978,7 @@ export class ProjectService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/hooks',
+            url: '/projects/{projectKey}/settings/hooks',
             path: {
                 'projectKey': projectKey,
             },
@@ -2009,7 +2009,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepositoryHook> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/hooks/{hookKey}',
+            url: '/projects/{projectKey}/settings/hooks/{hookKey}',
             path: {
                 'projectKey': projectKey,
                 'hookKey': hookKey,
@@ -2036,7 +2036,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepositoryHook> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled',
+            url: '/projects/{projectKey}/settings/hooks/{hookKey}/enabled',
             path: {
                 'projectKey': projectKey,
                 'hookKey': hookKey,
@@ -2067,7 +2067,7 @@ export class ProjectService {
     ): CancelablePromise<RestRepositoryHook> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled',
+            url: '/projects/{projectKey}/settings/hooks/{hookKey}/enabled',
             path: {
                 'projectKey': projectKey,
                 'hookKey': hookKey,
@@ -2098,7 +2098,7 @@ export class ProjectService {
     ): CancelablePromise<ExampleSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings',
+            url: '/projects/{projectKey}/settings/hooks/{hookKey}/settings',
             path: {
                 'projectKey': projectKey,
                 'hookKey': hookKey,
@@ -2131,7 +2131,7 @@ export class ProjectService {
     ): CancelablePromise<ExampleSettings> {
         return __request(OpenAPI, {
             method: 'PUT',
-            url: '/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings',
+            url: '/projects/{projectKey}/settings/hooks/{hookKey}/settings',
             path: {
                 'projectKey': projectKey,
                 'hookKey': hookKey,
@@ -2161,7 +2161,7 @@ export class ProjectService {
     ): CancelablePromise<RestPullRequestSettings> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}',
+            url: '/projects/{projectKey}/settings/pull-requests/{scmId}',
             path: {
                 'projectKey': projectKey,
                 'scmId': scmId,
@@ -2200,7 +2200,7 @@ export class ProjectService {
         ): CancelablePromise<RestPullRequestSettings> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}',
+                url: '/projects/{projectKey}/settings/pull-requests/{scmId}',
                 path: {
                     'projectKey': projectKey,
                     'scmId': scmId,
@@ -2232,7 +2232,7 @@ export class ProjectService {
         ): CancelablePromise<any> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/webhooks',
+                url: '/projects/{projectKey}/webhooks',
                 path: {
                     'projectKey': projectKey,
                 },
@@ -2262,7 +2262,7 @@ export class ProjectService {
         ): CancelablePromise<RestWebhook> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/webhooks',
+                url: '/projects/{projectKey}/webhooks',
                 path: {
                     'projectKey': projectKey,
                 },
@@ -2297,7 +2297,7 @@ export class ProjectService {
         ): CancelablePromise<RestWebhookRequestResponse> {
             return __request(OpenAPI, {
                 method: 'POST',
-                url: '/api/latest/projects/{projectKey}/webhooks/test',
+                url: '/projects/{projectKey}/webhooks/test',
                 path: {
                     'projectKey': projectKey,
                 },
@@ -2330,7 +2330,7 @@ export class ProjectService {
         ): CancelablePromise<void> {
             return __request(OpenAPI, {
                 method: 'DELETE',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}',
+                url: '/projects/{projectKey}/webhooks/{webhookId}',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,
@@ -2359,7 +2359,7 @@ export class ProjectService {
         ): CancelablePromise<RestWebhook> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}',
+                url: '/projects/{projectKey}/webhooks/{webhookId}',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,
@@ -2391,7 +2391,7 @@ export class ProjectService {
         ): CancelablePromise<RestWebhook> {
             return __request(OpenAPI, {
                 method: 'PUT',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}',
+                url: '/projects/{projectKey}/webhooks/{webhookId}',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,
@@ -2424,7 +2424,7 @@ export class ProjectService {
         ): CancelablePromise<RestDetailedInvocation> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}/latest',
+                url: '/projects/{projectKey}/webhooks/{webhookId}/latest',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,
@@ -2457,7 +2457,7 @@ export class ProjectService {
         ): CancelablePromise<RestInvocationHistory> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics',
+                url: '/projects/{projectKey}/webhooks/{webhookId}/statistics',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,
@@ -2487,7 +2487,7 @@ export class ProjectService {
         ): CancelablePromise<RestInvocationHistory> {
             return __request(OpenAPI, {
                 method: 'GET',
-                url: '/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics/summary',
+                url: '/projects/{projectKey}/webhooks/{webhookId}/statistics/summary',
                 path: {
                     'projectKey': projectKey,
                     'webhookId': webhookId,

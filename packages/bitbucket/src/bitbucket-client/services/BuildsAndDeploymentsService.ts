@@ -611,7 +611,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,
@@ -648,7 +648,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<RestBuildStatus> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,
@@ -705,7 +705,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,
@@ -750,7 +750,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<void> {
         return __request(OpenAPI, {
             method: 'DELETE',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,
@@ -792,7 +792,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<RestDeployment> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,
@@ -830,7 +830,7 @@ export class BuildsAndDeploymentsService {
     ): CancelablePromise<RestDeployment> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
+            url: '/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments',
             path: {
                 'projectKey': projectKey,
                 'commitId': commitId,

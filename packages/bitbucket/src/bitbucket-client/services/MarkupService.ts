@@ -29,7 +29,7 @@ export class MarkupService {
     ): CancelablePromise<RestMarkup> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/latest/markup/preview',
+            url: '/markup/preview',
             query: {
                 'htmlEscape': htmlEscape,
                 'urlMode': urlMode,

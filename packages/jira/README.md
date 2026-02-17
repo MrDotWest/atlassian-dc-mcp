@@ -55,7 +55,7 @@ Alternatively, you can use `JIRA_API_BASE_PATH` instead of `JIRA_HOST` to specif
    JIRA_HOST=your-jira-instance.atlassian.net
    # OR alternatively use
    # JIRA_API_BASE_PATH=https://your-jira-instance.atlassian.net/rest
-   # Note: /api/latest/ is added automatically, do not include it
+   # Note: / is added automatically, do not include it
    JIRA_API_TOKEN=your-personal-access-token
    ```
 

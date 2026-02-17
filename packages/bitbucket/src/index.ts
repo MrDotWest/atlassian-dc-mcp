@@ -73,6 +73,16 @@ server.tool(
 );
 
 server.tool(
+  "bitbucket_getPullRequests",
+  "Get pull requests for a Bitbucket repository",
+  bitbucketToolSchemas.getPullRequests,
+  async ({ projectKey, repositorySlug, state, at, direction, order, start, limit }) => {
+    const result = await bitbucketService.getPullRequests(projectKey, repositorySlug, state, at, direction, order, start, limit);
+    return formatToolResponse(result);
+  }
+);
+
+server.tool(
   "bitbucket_getPR_CommentsAndAction",
   "Get comments for a Bitbucket pull request and other actions, like approvals",
   bitbucketToolSchemas.getPullRequestComments,

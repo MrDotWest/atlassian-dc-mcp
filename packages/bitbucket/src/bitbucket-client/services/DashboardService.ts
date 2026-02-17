@@ -31,7 +31,7 @@ export class DashboardService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/dashboard/pull-request-suggestions',
+            url: '/dashboard/pull-request-suggestions',
             query: {
                 'changesSince': changesSince,
                 'limit': limit,
@@ -75,7 +75,7 @@ export class DashboardService {
     }> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/latest/dashboard/pull-requests',
+            url: '/dashboard/pull-requests',
             query: {
                 'closedSince': closedSince,
                 'role': role,

@@ -33,7 +33,7 @@ Windows:
 
 Note: Set `BITBUCKET_HOST` variable only to domain + port without protocol (e.g., `your-instance.atlassian.net`). The https protocol is assumed.
 
-Alternatively, you can use `BITBUCKET_API_BASE_PATH` instead of `BITBUCKET_HOST` to specify the complete API base URL including protocol (e.g., `https://your-instance.atlassian.net/rest`). Note that the `/api/latest/` part is static and added automatically in the code, so you don't need to include it in the `BITBUCKET_API_BASE_PATH` value.
+Alternatively, you can use `BITBUCKET_API_BASE_PATH` instead of `BITBUCKET_HOST` to specify the complete API base URL including protocol (e.g., `https://your-instance.atlassian.net/rest`). Note that the `/` part is static and added automatically in the code, so you don't need to include it in the `BITBUCKET_API_BASE_PATH` value.
 
 ## Features
 
@@ -55,7 +55,7 @@ Alternatively, you can use `BITBUCKET_API_BASE_PATH` instead of `BITBUCKET_HOST`
    BITBUCKET_HOST=your-bitbucket-instance.atlassian.net
    # OR alternatively use
    # BITBUCKET_API_BASE_PATH=https://your-bitbucket-instance.atlassian.net/rest
-   # Note: /api/latest/ is added automatically, do not include it
+   # Note: / is added automatically, do not include it
    BITBUCKET_API_TOKEN=your-personal-access-token
    ```
 
